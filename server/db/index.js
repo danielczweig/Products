@@ -29,7 +29,10 @@ module.exports = {
       features JSON,
       related JSON,
       styles JSON
-    );`
+    );`, (err, res) => {
+      if (err) console.log('this is the client.query err:', err)
+    }
   )
+
   client.release()
 })()
